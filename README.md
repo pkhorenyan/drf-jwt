@@ -27,7 +27,7 @@
 
 ```bash
 git clone https://github.com/pkhorenyan/drf-jwt.git
-cd auth-project
+cd drf-jwt
 ```
 ## Запуск
 ```bash
