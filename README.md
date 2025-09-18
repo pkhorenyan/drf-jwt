@@ -72,7 +72,7 @@ Mock бизнес-объекты
 
 В запросах, где требуется авторизация, добавляйте заголовок:
 
-```json lines
+```
 Authorization: Bearer <ACCESS_TOKEN>
 ```
 
@@ -136,7 +136,7 @@ PUT `/auth/admin/updateuser/`
 
 GET `/auth/me/`
 
-```json lines
+```
 Authorization: Bearer <ACCESS_TOKEN>
 ```
 
@@ -144,7 +144,7 @@ Authorization: Bearer <ACCESS_TOKEN>
 
 POST `/auth/logout/`
 
-```json lines
+```
 Authorization: Bearer <ACCESS_TOKEN>
 ```
 
@@ -152,7 +152,7 @@ Authorization: Bearer <ACCESS_TOKEN>
 
 Для разграничения прав доступа всегда указывать ваш Access token.
 
-```json lines
+```
 Authorization: Bearer <ACCESS_TOKEN>
 ```
 
