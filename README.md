@@ -70,12 +70,6 @@ Mock бизнес-объекты
 
 Все запросы идут к http://localhost:8000/.<br>
 
-В запросах, где требуется авторизация, добавляйте заголовок:
-
-```
-Authorization: Bearer <ACCESS_TOKEN>
-```
-
 #### Регистрация пользователя
 
 POST `/auth/register/`
@@ -131,30 +125,23 @@ PUT `/auth/admin/updateuser/`
   "role": "manager"
 }
 ```
+<br>
+<br>
+В запросах, где требуется авторизация, добавляйте заголовок:
+
+```
+Authorization: Bearer <ACCESS_TOKEN>
+```
 
 #### Получить профиль текущего пользователя
 
 GET `/auth/me/`
 
-```
-Authorization: Bearer <ACCESS_TOKEN>
-```
-
 #### Логаут
 
 POST `/auth/logout/`
 
-```
-Authorization: Bearer <ACCESS_TOKEN>
-```
-
 ### Бизнес-объекты (Mock API)
-
-Для разграничения прав доступа всегда указывать ваш Access token.
-
-```
-Authorization: Bearer <ACCESS_TOKEN>
-```
 
 #### Продукты
 
