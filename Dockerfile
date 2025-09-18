@@ -12,6 +12,11 @@ RUN pip install --no-cache-dir -r requirements.txt
 
 COPY . .
 
-RUN chmod +x /app/entrypoint.sh
-
-ENTRYPOINT ["/app/entrypoint.sh"]
+CMD sh -c "
+  echo 'Waiting for Postgres...' &&
+  while ! nc -z db 5432; do sleep 1; done &&
+  echo 'Postgres started' &&
+  python manage.py migrate --noinput &&
+  python manage.py load_initial_data &&
+  python manage.py runserver 0.0.0.0:8000
+"
